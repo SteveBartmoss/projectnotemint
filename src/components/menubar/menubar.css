@@ -1,0 +1,15 @@
+.main-div-menu{
+    border: 3px solid red;
+}
+
+.main-div-menu ul{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-div-menu li{
+    margin: .5rem;
+}
