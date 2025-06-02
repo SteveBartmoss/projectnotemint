@@ -3,6 +3,7 @@ import reactLogo from "./assets/react.svg";
 import { invoke } from "@tauri-apps/api/core";
 import "./App.css";
 import { MenuBar } from "./components/menubar/MenuBar";
+import { Panel } from "./components/panel/Panel";
 
 function App() {
   const [greetMsg, setGreetMsg] = useState("");
@@ -16,10 +17,14 @@ function App() {
   return (
     <div>
       <MenuBar />
-      <div>
-        <div>Menu Lateral</div>
-        <div>Display Area</div>
-      </div>
+      <Panel type='row'>
+        <Panel type='column'>
+          Menu Lateral
+        </Panel>
+        <Panel type='column'>
+          Display Area
+        </Panel>
+      </Panel>
     </div>
   );
 }
