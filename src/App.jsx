@@ -25,7 +25,7 @@ function App() {
               Menu Lateral
             </Panel>
           </Container>
-          <Container config={{width: '100%', height: '100%'}}>
+          <Container config={{width: '90%', height: '100%'}}>
             <Panel type='column'>
               Display Area
             </Panel>
