@@ -1,5 +1,6 @@
 .main-div-menu{
     border: 3px solid red;
+    position: relative;
 }
 
 .main-div-menu ul{
@@ -12,4 +13,20 @@
 
 .main-div-menu li{
     margin: .5rem;
+}
+
+.list-div-open{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: gray;
+    border: 1px, solid #ccc;
+    box-shadow: 0 2px 5px rgb(0,0,0,0.2);
+    padding: 10px;
+    width: 200px;
+    z-index: 1000;
+}
+
+.list-div-close{
+    display: none;
 }
