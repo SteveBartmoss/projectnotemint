@@ -4,6 +4,7 @@ import { invoke } from "@tauri-apps/api/core";
 import "./App.css";
 import { MenuBar } from "./components/menubar/MenuBar";
 import { Panel } from "./components/panel/Panel";
+import { Container } from "./components/container/Container";
 
 function App() {
   const [greetMsg, setGreetMsg] = useState("");
@@ -17,14 +18,20 @@ function App() {
   return (
     <div>
       <MenuBar />
-      <Panel type='row'>
-        <Panel type='column'>
-          Menu Lateral
+      <Container config={{ width: '100%', height: '100%' }}>
+        <Panel type='row'>
+          <Container config={{width: '10%', height: '100%'}}>
+            <Panel type='column'>
+              Menu Lateral
+            </Panel>
+          </Container>
+          <Container config={{width: '100%', height: '100%'}}>
+            <Panel type='column'>
+              Display Area
+            </Panel>
+          </Container>
         </Panel>
-        <Panel type='column'>
-          Display Area
-        </Panel>
-      </Panel>
+      </Container>
     </div>
   );
 }
