@@ -30,3 +30,11 @@
 .list-div-close{
     display: none;
 }
+
+.header-div li{
+    padding: .2rem;
+}
+
+.header-div li:hover {
+    background-color: grey;
+}
