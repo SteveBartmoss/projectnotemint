@@ -19,7 +19,7 @@
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: gray;
+    background-color: #3d3a3a;
     border: 1px, solid #ccc;
     box-shadow: 0 2px 5px rgb(0,0,0,0.2);
     padding: 10px;
