@@ -15,9 +15,29 @@ function App() {
     setGreetMsg(await invoke("greet", { name }));
   }
 
+  const menuElements = [
+    {
+      title: 'File',
+      childs : [
+        {
+          title: 'New',
+          function: null,          
+        },
+      ]
+    },
+    {
+      title: 'Edit',
+      childs: []
+    },
+    {
+      title: 'Help',
+      childs: []
+    }
+  ]
+
   return (
     <div>
-      <MenuBar />
+      <MenuBar elements={menuElements} />
       <Container config={{ width: '100%', height: '100%' }}>
         <Panel type='row'>
           <Container config={{width: '10%', height: '100%'}}>
