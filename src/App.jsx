@@ -5,6 +5,7 @@ import "./App.css";
 import { MenuBar } from "./components/menubar/MenuBar";
 import { Panel } from "./components/panel/Panel";
 import { Container } from "./components/container/Container";
+import { CodeSpaceV1 } from "./components/codespace/CodeSpace";
 
 function App() {
   const [greetMsg, setGreetMsg] = useState("");
@@ -46,7 +47,7 @@ function App() {
         <Panel type='row'>
           <Container config={{width: '100%', height: '100%'}}>
             <Panel type='column'>
-              Display Area
+              <CodeSpaceV1 />
             </Panel>
           </Container>
         </Panel>
