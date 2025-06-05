@@ -1,24 +1,34 @@
 import { useState } from "react";
 import "./menubar.css";
 
-export function MenuBar() {
+export function MenuBar({elements=[]}) {
 
     const [collapse, setCollapse] = useState(false)
+    const [elementChilds, setElementChilds] = useState([])
+
+    const handleClickItem = (childs) => {
+        setCollapse(!collapse)
+        setElementChilds(childs)
+    }
 
 
     return (
         <div className="main-div-menu">
             <div className="header-div">
                 <ul>
-                    <li onClick={() => setCollapse(!collapse) }>File</li>
-                    <li>Edit</li>
-                    <li>Help</li>
+                    {
+                        elements.map((item,index) => 
+                            <li key={index} onClick={() => handleClickItem(item.childs)} >{item.title}</li>
+                        )
+                    }
                 </ul>
             </div>
             <div className={collapse ? 'list-div-open' : 'list-div-close'}>
-                <p>
-                    Prueba
-                </p>
+                {
+                    elementChilds.map((child,index) => 
+                        <p>{child.title}</p>
+                    )
+                }
             </div>
         </div>
     )
